@@ -19,7 +19,7 @@ services:
   postgres:
     image: postgres:15-alpine
     platform: linux/arm64
-    restart:
+    restart: always
     environment:
       - TZ=${TZ}
       - POSTGRES_DB=${POSTGRES_DB}
