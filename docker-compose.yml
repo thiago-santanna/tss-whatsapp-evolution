@@ -49,7 +49,7 @@ services:
       - ./data/n8n:/home/node/.n8n
 
   evolution:
-    image: atendai/evolution-api:2.1.1
+    image: atendai/evolution-api:latest
     container_name: evolution
     restart: always
     env_file:
