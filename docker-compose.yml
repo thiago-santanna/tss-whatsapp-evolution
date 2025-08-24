@@ -48,16 +48,16 @@ services:
     volumes:
       - ./data/n8n:/home/node/.n8n
 
-  # evolution:
-  #   image: atendai/evolution-api:latest
-  #   container_name: evolution
-  #   restart: always
-  #   environment:
-  #     - SERVER_PORT=8080
-  #     - NODE_ENV=${EVOLUTION_NODE_ENV:-production}
-  #     - EVOLUTION_API_KEY=${EVOLUTION_API_KEY:-huF8Dt7m5o90d0obeRglCFPOOlJlPLQ4cCymWA7dTRWcGoO3fBI6ZYvhfp1AS2sF}
-  #   volumes:
-  #     - ./data/evolution:/app/storage
+  evolution:
+    image: atendai/evolution-api:latest
+    container_name: evolution
+    restart: always
+    environment:
+      - SERVER_PORT=8080
+      - NODE_ENV=${EVOLUTION_NODE_ENV:-production}
+      - EVOLUTION_API_KEY=${EVOLUTION_API_KEY:-huF8Dt7m5o90d0obeRglCFPOOlJlPLQ4cCymWA7dTRWcGoO3fBI6ZYvhfp1AS2sF}
+    volumes:
+      - ./data/evolution:/app/storage
 
   # npm:
   #   image: jc21/nginx-proxy-manager:latest
